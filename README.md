@@ -33,13 +33,31 @@ This project is a simple Command-Line Interface (CLI) chatbot designed using Pyt
         "required_words": []
     }
 ]
+```
+
 ## Customizing Responses
-To add or modify the bot's responses, follow these steps:
 
-1. Open the `bot.json` file.
-2. Add new `user_input` phrases, `bot_response`, and optionally, `required_words` that must appear in the user's input for a valid match.
+### Steps to Modify or Add New Responses:
+Follow the steps below to easily add or modify the chatbot's responses:
 
-### Example of a JSON entry:
+1. **Locate the `bot.json` file**: This file contains the pre-defined responses.
+2. **Add new entries**: You can add new `user_input` phrases, `bot_response`, and optionally, `required_words` that must be present for a match.
+
+---
+
+### JSON Structure for Customization
+
+Each entry in the `bot.json` file should have the following structure:
+
+- **`user_input`**: An array of words/phrases the bot should look for.
+- **`bot_response`**: The response the bot will give when a match is found.
+- **`required_words`** (optional): Words that *must* appear in the user input for a match.
+
+---
+
+### Example JSON Entry:
+Here is an example of how to create a new entry in `bot.json`:
+
 ```json
 {
     "user_input": ["what", "your", "name"],
